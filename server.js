@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 	res.send(database.users);
 })
 
-app.post('/signin', (req,res) => {signIn.handleSignIn(req,res,db,bcrypt,saltRound)});
+app.post('/signin', (req,res) => {sigginIn.handleSignIn(req,res,db,bcrypt,saltRound)});
 app.post('/register', (req,res) => {register.handleRegister(req,res,db,bcrypt,saltRound)});
 app.get('/profile/:id', (req,res) => {profile.handleProfileGet (req,res,db)});
 app.put('/image', (req,res) => {image.handleImage(req,res,db)});
@@ -39,5 +39,5 @@ app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)});
 
 
 app.listen(process.env.PORT || 3000, () => {
-	console.log(`App is running on port ${`procces.env.PORT}`);
+	console.log(`App is running on port ${procces.env.PORT}`);
 })
