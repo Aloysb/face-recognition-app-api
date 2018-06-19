@@ -28,7 +28,7 @@ app.use(cors());
 
 
 app.get('/', (req, res) => {
-	res.send(database.users);
+	res.send(db.users);
 })
 
 app.post('/signin', (req,res) => {sigginIn.handleSignIn(req,res,db,bcrypt,saltRound)});
